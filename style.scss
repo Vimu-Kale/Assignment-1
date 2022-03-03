@@ -1,0 +1,638 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+$primary-color:#1d2951;
+$secondary-color:white;
+$purple:#6f42c1;
+$grey-bgc:#f7f7f7;
+
+body{
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    // padding-bottom: 50px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding-top:30px;
+    padding-bottom: 30px;
+}
+
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+    img{
+        padding-left: 30px;
+        height: 25%;
+        width:50%;
+    }
+}
+
+.navbar-links{
+    ul{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    li{
+        list-style: none;
+        // &:hover{
+        //     // background-color:$secondary-color;
+        // }
+    }
+
+    a{
+        text-decoration: none;
+        color: $secondary-color;
+        // padding: 1rem;
+        padding-right: 50px;
+        font-size: .90rem;
+        display: block;
+        &:hover{
+            color: #3da5d9;
+        }
+    }
+}
+
+.login{
+    width:100px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-color: transparent;
+    color: white;
+    font-weight: 700;
+    margin-right: 20px;
+
+    
+    &:hover{
+        background-color: white;
+        color:black;
+        text-decoration: underline;
+    }
+}
+
+.get-started{
+        width:150px;
+        height:40px;
+        border: 1px solid transparent;
+        border-radius: 25px;
+        background-color: #3da5d9;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        color: $secondary-color;
+        margin-right: 30px;
+        &:hover{
+            cursor:pointer;
+            text-decoration: underline;
+            
+        }
+}
+
+.toggle-button{
+    position: absolute;
+    top: 40px;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+    .bar{
+        height: 3px;
+        width: 100%;
+        background-color: $purple;
+        border-radius: 10px;
+    }
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:20px;
+    padding: 0 40px;
+    grid-template-areas:"desc desc desc video video video";
+}
+
+///////////////////////////// HERO START ////////////////////////////////////////
+
+.grid-hero{
+    align-items: center;
+    grid-template-areas: "desc desc desc video video video";
+    background-color: $primary-color;
+    padding-top: 20px;
+    padding-bottom: 190px;
+}
+
+.grid-hero{
+    padding-top: 100px;
+    .hero-desc{
+        grid-area: desc;
+        margin-left: 3rem;
+        margin-right: 2rem;
+        justify-self: flex-start;
+        color: $secondary-color;
+
+        .hero-heading{
+            font-size: 45px;
+            padding-bottom: 20px;
+        }
+
+        .hero-subheading{
+            font-size: 20px;
+        }
+
+        .hero-btn-grp{
+            button{
+            width:200px;
+            height:50px;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            background-color: #3da5d9;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: $secondary-color;
+            margin-top: 20px;
+            margin-right: 30px;
+            &:hover{
+                cursor:pointer;
+                text-decoration: underline;     
+            }
+            }
+            
+        }
+    }
+    .hero-video{
+        grid-area: video;
+        width:90%;
+        max-width: 800px;
+        
+    }
+}
+
+////////////////////// HERO END ////////////////////////////////////////////
+
+///////////////////// CODE REVIEW SECTION START ////////////////////////////
+.grid-code-review{
+    background-color: $grey-bgc;
+    .code-review-heading{
+        grid-column: span 6;
+        h2{
+            font-size: 35px;
+            font-weight: lighter;
+        }
+    }
+    .code-review-img{
+        grid-column: span 6;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+            // margin-left: 70px;
+            // margin-right: 70px;
+        }
+    }
+}
+
+///////////////////----HEADING & IMAGE END-----///////////////////////////////////////////////
+
+.grid-code-review-details{
+    background-color: $grey-bgc;
+   .code-review-details{
+    grid-column: span 2;
+    font-weight: lighter;
+    margin: 2rem;
+   }
+   .details-title{
+    text-align: center;
+    font-size:1.5rem;
+    color:#333;
+    margin-bottom: 2rem;
+    font-weight: bold;
+   }
+}
+
+///////////////////// CODE REVIEW SECTION END ////////////////////////////
+
+///////////////////// STATIC CODE SECTION START///////////////////////////
+.grid-static-code{
+    
+    .static-code-heading{
+        grid-column: span 6;
+        h2{
+            font-size: 35px;
+            font-weight: lighter;
+        }
+    }
+
+}
+/////////////////////////////////////////////////////////////////////
+.grid-static-code-details{
+    .static-code-detail{
+        grid-column: span 2;
+        margin: 2rem;
+        .static-code-detail-title{
+            text-align: center;  
+            margin-bottom: 2rem;    
+            img{
+                 height: 40px;
+                 width: 60px;
+            }
+        }
+    }
+    .static-code-detail-desc{
+        font-size: 1.2rem;
+        color: #444;
+        font-weight: bold;
+        text-align: center;
+    }
+    .static-code-detail-logo{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+}
+
+
+/////////////////////// STATIC CODE SECTION END ///////////////////////////////////////////////
+///////////////////////GRAHAM AWARD SECTION START/////////////////////////////////
+.ga{
+    background-color: #1d2951;
+    color: white;
+}
+
+
+.grid-graham-award{
+    background-color: #1d2951;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    img{
+        grid-area: desc;
+        width:100%;
+        max-width: 800px;  
+        box-shadow: 0px 8px 20px -6px black;
+    }
+    .graham-award{
+        grid-area: video;
+        margin-left: 3rem;
+        margin-right: 2rem;
+        justify-self: flex-start;
+        color: $secondary-color;
+
+        .award-headline{
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+        .award-sub-headline{
+            font-size: 20px;
+        }
+         
+    }
+    
+}
+///////////////////////// GRAHAM AWARD SECTION END ///////////////////////////////////////
+
+.grid-scr{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    img{
+        grid-area: video;
+        width:100%;
+        max-width: 800px;  
+        box-shadow: 0px 8px 20px -6px black;
+    }
+    .grid-scr-details{
+        grid-area: desc;
+        margin-left: 3rem;
+        margin-right: 2rem;
+        justify-self: flex-start;
+        color: black;;
+
+        .scr-headline{
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+        .scr-sub-headline{
+            font-size: 20px;
+        }
+         
+    }
+    
+}
+
+
+/////////////////////////////////////////////////////////
+
+.grid-ncs{
+    padding-top: 30px;
+    background-color: $grey-bgc;
+    padding-bottom: 20px;
+    img{
+        grid-area: desc;
+        width:100%;
+        max-width: 800px;  
+        box-shadow: 0px 8px 20px -6px black;
+    }
+    .grid-ncs-details{
+        grid-area: video;
+        margin-left: 3rem;
+        margin-right: 2rem;
+        justify-self: flex-start;
+        color: black;;
+
+        .ncs-headline{
+            font-size: 25px;
+            padding-bottom: 20px;
+        }
+        .ncs-sub-headline{
+            font-size: 20px;
+        }
+         
+    }
+    
+}
+/////////////////////////////////////////////////////////
+
+.lang-flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    img{
+        padding: 10px;
+    }
+}
+//////////////////////////////////////////////////////////
+.ss{
+    background-color: $grey-bgc;
+}
+
+.grid-code-review-details{
+    .ds{
+        text-align: center;
+        grid-column: span 3;
+    }
+}
+
+////////////////////////////////////////////////////////
+
+.footer-section{
+    background-color: #1d2951;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    padding-left: 10px;
+
+    .icons{
+        display: flex;
+        flex-direction: row;  
+    }
+
+    .icon-cont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        height: 50px;
+        width: 50px;
+        background-color: #f7f7f7;
+        margin: 40px 10px 40px 0px ;
+        color: #1d2951 !important;       
+    }
+    i{
+        color: #1d2951;
+    }
+}
+
+////////////////////////////////////////////////////////
+@media screen and (max-width:1200px) {
+
+}
+
+@media screen and (max-width:992px) {
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .login{
+        display: none;
+    }
+
+    .get-started{
+        display: none;
+    }
+
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+        display:none;
+        width: 100%;
+        ul{
+            flex-direction: column;
+            width: 100%;
+        }
+
+        a{
+            padding: .5rem;
+        }
+        &.active{
+            display: flex;
+            
+        }
+    }
+
+    /////////////////////////////////////////
+    .grid-graham-award{
+        .graham-award{
+            .award-headline{
+                font-size: 20px;
+            }
+            .award-sub-headline{
+                font-size: 15px;
+            }
+        }
+    }  
+}
+@media screen and (max-width:768px) {
+    .grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "desc";
+    }
+    .grid-hero{
+        padding-top: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "desc" "video";
+        .hero-video{
+            padding-top: 20px;
+            justify-self: center;
+        }
+    }
+
+    .hero-desc{
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    //////////////////////////////////////////
+    .grid-code-review{
+        .code-review-heading{
+            h2{
+                font-size: 30px;
+            }
+        }
+
+    }
+
+    .grid-static-code{
+        .static-code-heading{
+            h2{
+                font-size: 30px;
+            }
+        }
+
+    }
+    ///////////////////////////////////
+    .grid-graham-award{
+        padding-top: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "desc" "video";
+        img{
+            // padding-top: 20px;
+            justify-self: center;
+            box-shadow: 0px 8px 20px -6px black;
+        }
+    }
+
+    .graham-award{
+        justify-content: center;
+        margin-top: 2rem;
+        .award-headline{
+            font-size: 10px;
+        }
+        
+    }
+    ////////////////////////////////////
+    .grid-scr{
+        padding-top: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"desc" "video";
+        img{
+            padding-top: 20px;
+            justify-self: center;
+            box-shadow: 0px 8px 20px -6px black;
+        }
+    }
+
+    .grid-scr-details{
+        justify-content: center;
+        margin-top: 2rem;
+        .scr-headline{
+            font-size: 10px;
+        }
+        
+    }
+
+    /////////////////////////////////////////
+    .grid-ncs{
+        padding-top: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:"desc" "video";
+        img{
+            padding-top: 20px;
+            justify-self: center;
+            box-shadow: 0px 8px 20px -6px black;
+        }
+    }
+
+    .grid-ncs-details{
+        justify-content: center;
+        margin-top: 2rem;
+        .ncs-headline{
+            font-size: 10px;
+        }
+        
+    }
+
+
+}
+@media screen and (max-width:600px) {
+  .grid-hero{
+      .hero-desc{
+          margin: 1rem;
+          .hero-heading{
+              font-size: 25px;
+          }
+          .hero-subheading{
+              font-size: 15px;
+          }
+      }
+      padding-bottom: 20px;
+    }
+//////////////////////////////////////////////
+
+    .grid-code-review{
+        .code-review-heading{
+            h2{
+                font-size: 25px;
+            }
+        }
+
+    }
+    .grid-code-review-details{
+        grid-template-columns: 1fr;
+        padding-top: 2rem;
+        .details-title{
+            text-align: left;
+            font-size: 20px;
+            
+        }
+        .sst{
+            text-align: center;
+        }
+        .code-review-details{
+            margin: 1rem;
+        }
+    }
+    /////////////////////////////////////////
+    .grid-static-code{
+        .static-code-heading{
+            h2{
+                font-size: 25px;
+            }
+        }
+
+    }
+    //////////////////////////////////////////
+    .grid-static-code-details{
+        .static-code-detail-desc{
+            font-size: 1rem;
+        }
+    }
+    ////////////////////////
+    .grid-graham-award{
+        .graham-award{
+            .award-headline{
+                font-size: 20px;
+            }
+            .award-sub-headline{
+                font-size: 15px;
+            }
+        }
+    } 
+    
+    ///////////////////////////
+
+    
+
+}
